@@ -188,7 +188,10 @@ export function ProductsClient({ userEmail }: ProductsClientProps) {
         </div>
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
-            <Button onClick={resetForm}>
+            <Button onClick={() => {
+              resetForm()
+              setIsDialogOpen(true)
+            }}>
               <Plus className="mr-2 h-4 w-4" />
               新規商品追加
             </Button>

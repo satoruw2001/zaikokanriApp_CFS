@@ -129,7 +129,10 @@ export function StoresClient({ userEmail }: StoresClientProps) {
         </div>
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
-            <Button onClick={() => handleDialogClose()}>
+            <Button onClick={() => {
+              handleDialogClose()
+              setIsDialogOpen(true)
+            }}>
               <Plus className="mr-2 h-4 w-4" />
               新規店舗追加
             </Button>
