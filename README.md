@@ -111,6 +111,7 @@ http://localhost:3000 でアプリケーションが起動します。
 
 ## ビルドとデプロイ
 
+### ローカルでのビルド
 ```bash
 # 本番ビルド
 npm run build
@@ -118,6 +119,14 @@ npm run build
 # 本番サーバー起動
 npm run start
 ```
+
+### 本番環境へのデプロイ
+詳細なデプロイ手順は **[DEPLOYMENT.md](./DEPLOYMENT.md)** を参照してください。
+
+推奨デプロイ方法：
+- **Vercel**（無料、GitHubと自動連携）
+- Netlify
+- 自前サーバー（VPS、AWS、GCPなど）
 
 ## ライセンス
 
