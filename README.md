@@ -72,6 +72,9 @@ cp .env.example .env.local
 
 Supabaseダッシュボードで `supabase/schema.sql` を実行してテーブルを作成します。
 
+**重要**: データ保存エラーを防ぐため、RLSポリシーの設定が必要です。
+詳細は [RLS_POLICY_SETUP.md](./RLS_POLICY_SETUP.md) を参照してください。
+
 ### 4. 開発サーバーの起動
 
 ```bash

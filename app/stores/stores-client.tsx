@@ -85,9 +85,10 @@ export function StoresClient({ userEmail }: StoresClientProps) {
       setFormData({ name: "", address: "" })
       setEditingStore(null)
       loadStores()
-    } catch (error) {
+    } catch (error: any) {
       console.error("店舗の保存エラー:", error)
-      alert("店舗の保存に失敗しました")
+      const errorMessage = error?.message || error?.error_description || JSON.stringify(error)
+      alert(`店舗の保存に失敗しました: ${errorMessage}`)
     }
   }
 
