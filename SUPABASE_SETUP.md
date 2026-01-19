@@ -76,7 +76,20 @@ CREATE POLICY "Enable all for authenticated users" ON inventory_records FOR ALL 
 2. Email認証が有効になっていることを確認
 3. 必要に応じて他のプロバイダー（Google, GitHubなど）を有効化
 
-## 6. 動作確認
+## 6. Storageバケットのセットアップ
+
+画像アップロード機能のためにStorageバケットを作成します。
+
+1. Supabaseダッシュボードの左メニューから「SQL Editor」を選択
+2. 「New query」をクリック
+3. `supabase/storage_setup.sql`の内容を全てコピー＆ペースト
+4. 「Run」ボタンをクリックしてSQLを実行
+
+これにより以下のバケットが作成されます：
+- **product-images**: 商品画像用（公開）
+- **purchase-invoices**: 納品書画像用（認証済みユーザーのみ）
+
+## 7. 動作確認
 
 1. 開発サーバーを起動：`npm run dev`
 2. http://localhost:3000 にアクセス
